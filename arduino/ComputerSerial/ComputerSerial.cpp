@@ -23,13 +23,13 @@ void* ComputerSerial::placeHolder(uint8_t flag, uint8_t content[], word contentS
 	return NULL;
 }
 
-ComputerSerial::ComputerSerial(int baud)
+ComputerSerial::ComputerSerial(long baud)
 {
     //Initialize with baudrate if requested
     if(baud != 0) begin(baud);
 }
 
-void ComputerSerial::begin(int baud){
+void ComputerSerial::begin(long baud){
 	Serial.begin(baud);
 
 	for (int i = 0; i < NUM_OPCODES; ++i)

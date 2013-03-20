@@ -40,7 +40,7 @@ class ComputerSerial{
 	unsigned int bytesReceived;
 
 public:
-	ComputerSerial(int baud = 0);
+	ComputerSerial(long baud = 0);
 	static void* placeHolder(uint8_t flag, uint8_t content[], word contentSize);
 	void serialEvent();
 	void begin(int baud);
